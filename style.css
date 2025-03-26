@@ -1,0 +1,21 @@
+html {
+    background-color: #d3d3d3;
+}
+
+div.Nagłówek {
+    color: blue;
+}
+
+p.Main-text {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+
+
+
+
+
