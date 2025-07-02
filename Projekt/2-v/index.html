@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dziennik Połowów</title>
+  <link rel="stylesheet" href="/2-v/style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Dziennik połowów wędkarskich</h1>
+
+    <form id="catchForm">
+      <label>
+        Gatunek ryby:
+        <input type="text" name="species" placeholder="Np. Karp" required />
+      </label>
+      <label>
+        Data połowu:
+        <input type="date" name="date" required />
+      </label>
+      <label>
+        Masa (kg):
+        <input type="number" name="weight" step="0.1" min="0.1" max="200" required />
+      </label>
+      <label>
+        Długość (cm):
+        <input type="number" name="length" min="5" max="200" required />
+      </label>
+      <label>
+        Miejsce połowu:
+        <input type="text" name="location" placeholder="Np. Jezioro Wigry, pomost 3" required />
+      </label>
+      <label>
+        Typ połowu:
+        <select name="method">
+          <option>spinning</option>
+          <option>grunt</option>
+          <option>spławik</option>
+        </select>
+      </label>
+      <label>
+        Notatka:
+        <textarea name="note" rows="3" placeholder="np. Wietrzna pogoda, dużo brań."></textarea>
+      </label>
+      <button type="submit">Dodaj wpis</button>
+    </form>
+
+    <section id="stats">
+      <h2>Statystyki sezonu</h2>
+      <p>Łączna masa: <span id="totalWeight">0</span> kg</p>
+      <p>Średnia masa: <span id="avgWeight">0</span> kg</p>
+      <p>Najczęstszy gatunek: <span id="mostCommon">-</span></p>
+    </section>
+
+    <section id="entries">
+      <h2>Lista połowów</h2>
+      <ul id="catchList"></ul>
+    </section>
+  </main>
+
+</body>
+</html>

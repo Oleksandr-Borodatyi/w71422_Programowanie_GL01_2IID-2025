@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadania JS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Zadania JavaScript</h1>
+
+  <!-- Zadanie 1: Formularz rejestracyjny -->
+  <section>
+    <h2>Formularz Rejestracyjny</h2>
+    <form id="registerForm">
+      <label>Imię: <input type="text" id="firstName" required></label><br>
+      <label>Nazwisko: <input type="text" id="lastName" required></label><br>
+      <label>Email: <input type="email" id="email" required></label><br>
+      <label>Hasło: <input type="password" id="password" required></label><br>
+      <label>Powtórz hasło: <input type="password" id="repeatPassword" required></label><br>
+      <button type="submit">Zapisz</button>
+    </form>
+  </section>
+
+  <!-- Zadanie 2 i 3: Samochody -->
+  <section>
+    <h2>Samochody</h2>
+    <button onclick="testSamochod()">Testuj Obiekt Samochodu</button>
+    <button onclick="analizaSamochodow()">Analiza Listy Samochodów</button>
+    <pre id="outputSamochody"></pre>
+  </section>
+
+  <!-- Zadanie 4: Dodawanie do tabeli -->
+  <section>
+    <h2>Dodaj osobę do tabeli</h2>
+    <input type="text" id="imie" placeholder="Imię">
+    <input type="text" id="nazwisko" placeholder="Nazwisko">
+    <button id="dodaj">Dodaj</button>
+
+    <table>
+      <thead>
+        <tr><th>Imię</th><th>Nazwisko</th></tr>
+      </thead>
+      <tbody id="tabelaBody"></tbody>
+    </table>
+  </section>
+
+</body>
+</html>
